@@ -1,0 +1,46 @@
+[{
+    "name":  "synkup",
+    "logConfiguration":  {
+                             "logDriver":  "awslogs",
+                             "options":  {
+                                             "awslogs-region":  "ap-south-1",
+                                             "awslogs-stream-prefix":  "synkup",
+                                             "awslogs-group":  "/ecs/synkup"
+                                         }
+                         },
+    "environment":  [
+                        {
+                            "value":  "5001",
+                            "name":  "PORT"
+                        },
+                        {
+                            "value":  "mongodb+srv://sahupranjal517:QUmeSFLSucSDf1Vx@cluster0.fafpnll.mongodb.net/?retryWrites=true\u0026w=majority\u0026appName=Cluster0",
+                            "name":  "MONGO_URI"
+                        },
+                        {
+                            "value":  "ybyvup62p27j",
+                            "name":  "STREAM_API_KEY"
+                        },
+                        {
+                            "value":  "gbg4hgatr2wejxwdf89yxck3mcs74znxexqs57gucejgxw2zs7m7kbf3gjv9vqjz",
+                            "name":  "STREAM_SECRET_KEY"
+                        },
+                        {
+                            "value":  "gghgfgfjfjfhj",
+                            "name":  "JWT_SECRET_KEY"
+                        },
+                        {
+                            "value":  "production",
+                            "name":  "NODE_ENV"
+                        }
+                    ],
+    "essential":  true,
+    "image":  "543402457804.dkr.ecr.ap-south-1.amazonaws.com/synkup:latest",
+    "portMappings":  [
+                         {
+                             "protocol":  "tcp",
+                             "containerPort":  5001
+                         }
+                     ]
+}
+]
