@@ -1,0 +1,192 @@
+﻿.stylish_radio input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    position: relative;
+    top: 5.33333px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    transition: all 0.15s ease-out 0s;
+    background: #fff;
+    border: 3px solid #1f4a7c ;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 0.8rem;
+    margin-left: 0.8rem;
+    outline: none;
+    position: relative;
+    z-index: 10;
+}
+
+.stylish_radio input[type="radio"]:hover {
+    background: #1f4a7c ;
+}
+
+.stylish_radio input[type="radio"]:checked {
+    background: #1f4a7c ;
+}
+
+.stylish_radio input[type="radio"]:checked::before {
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    content: '✔';
+    display: inline-block;
+    font-size: 20.66667px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.stylish_radio input[type="radio"]:checked::after {
+    -webkit-animation: click-wave 0.65s;
+    -moz-animation: click-wave 0.65s;
+    animation: click-wave 0.65s;
+    background: #40e0d0;
+    content: '';
+    display: block;
+    position: relative;
+    z-index: 100;
+}
+
+.stylish_radio input[type="radio"] {
+    border-radius: 50%;
+}
+
+.stylish_radio input[type="radio"].radio::after {
+    border-radius: 50%;
+}
+
+.stylish_radio label {
+    margin-bottom: 0px;
+}
+
+
+/* Check Box Style */
+
+    .style_check input[type="checkbox"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+        position: relative;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 18px;
+        width: 18px;
+        transition: all 0.15s ease-out 0s;
+        background: #fff;
+        border: 2px solid #3c8dbc;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        margin-right: 0.8rem;
+        margin-left: 0.8rem;
+        outline: none;
+        position: relative;
+        z-index: 1000;
+    }
+
+    .style_check input[type="checkbox"]:hover {
+        background: #3c8dbc;
+    }
+
+    .style_check input[type="checkbox"]:checked {
+        background: #3c8dbc;
+    }
+
+    .style_check input[type="checkbox"]:checked::before {
+        height: 18px;
+        width: 18px;
+        position: absolute;
+        content: '✔';
+        display: inline-block;
+        font-size: 20.66667px;
+        text-align: left;
+        line-height: 15px;
+        left: 0px;
+    }
+
+    .style_check input[type="checkbox"]:checked::after {
+        background: #40e0d0;
+        content: '';
+        display: block;
+        position: relative;
+        z-index: 100;
+    }
+
+    .style_check input[type="checkbox"] {
+        border-radius: 0%;
+    }
+
+    .style_check input[type="checkbox"].radio::after {
+        border-radius: 0%;
+    }
+
+    .style_checked input[type="checkbox"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+        position: relative;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 18px;
+        width: 18px;
+        transition: all 0.15s ease-out 0s;
+        background: #fff;
+        border: 2px solid #00a65a;
+        color: #fff;
+        cursor: not-allowed;
+        display: inline-block;
+        margin-right: 0.8rem;
+        margin-left: 0.8rem;
+        outline: none;
+        position: relative;
+        z-index: 1000;
+    }
+
+    .style_checked input[type="checkbox"]:hover {
+        background: #3c8dbc;
+    }
+
+    .style_checked input[type="checkbox"]:checked {
+        background: #00a65a;
+    }
+
+    .style_checked input[type="checkbox"]:checked::before {
+        height: 18px;
+        width: 18px;
+        position: absolute;
+        content: '✔';
+        display: inline-block;
+        font-size: 20.66667px;
+        text-align: left;
+        line-height: 15px;
+        left: 0px;
+    }
+
+    .style_checked input[type="checkbox"]:checked::after {
+        background: #40e0d0;
+        content: '';
+        display: block;
+        position: relative;
+        z-index: 100;
+    }
+
+    .style_checked input[type="checkbox"] {
+        border-radius: 0%;
+    }
+
+    .style_checked input[type="checkbox"].radio::after {
+        border-radius: 0%;
+    }

@@ -1,0 +1,236 @@
+﻿$(document).ready(function () {
+    // Error Model Message
+    $('#Error_close').click(function () {
+        $('#ErrorBox').css("right", "-420px");
+    });
+
+    // Validation Js by akash rao deshmukh
+    $("input.Mandatory").blur(function () {
+        var Attribute_Arr = [];
+        Attribute_Arr = $('#' + this.id).getAttributes();
+        if ($(this).attr("errortype") == "Required") {
+            Error_Utility.Required_Validate(Attribute_Arr, this.value);
+        } else if ($(this).attr("errortype") == "Mobile_Validate") {
+            Error_Utility.Mobile_Validate(Attribute_Arr, this.value);
+        } else if ($(this).attr("errortype") == "Email_Validate") {
+            Error_Utility.Email_Validate(Attribute_Arr, this.value);
+        }
+    });
+
+    $("select.Mandatory").change(function () {
+        var Attribute_Arr = [];
+        Attribute_Arr = $('#' + this.id).getAttributes();
+        if ($('#' + this.id).prop('selectedIndex') == 0) {
+            Error_Utility.Required_Validate(Attribute_Arr, "");
+        } else {
+            Error_Utility.Required_Validate(Attribute_Arr, this.value);
+        }
+    });
+
+
+
+    // Get All attributes values
+    $.fn.getAttributes = function () {
+        var attributes = {};
+        if (this.length) {
+            $.each(this[0].attributes, function (index, attr) {
+                attributes[attr.name] = attr.value;
+            });
+        }
+        return attributes;
+    };
+
+    Sys.WebForms.PageRequestManager.getInstance().add_pageLoaded(pageLoad);
+
+
+    $('#Error_close').click(function () {
+        $('#ErrorBox').css("right", "-420px");
+    });
+
+});
+
+
+function ShowErrorBox(msg) {
+    $('.ErrorMsg').html(msg);
+    $('.popup').show().css("right", "20px");
+    return false;
+}
+
+
+var Error_Utility = {
+    escapeQuotes: function (string) {
+        if (string != "") {
+            return string.replace(/'/g, "\\'");
+        }
+    },
+
+    unescapeQuotes: function (string) {
+        if (string != "") {
+            return string.replace(/\\'/g, "'");
+        }
+    },
+
+    ShowErrorBox: function (string) {
+        var msg = Error_Utility.unescapeQuotes(string);
+        $('.ErrorMsg').html(msg);
+        $('.popup').css("right", "20px");
+        return false;
+    },
+
+    Required_Validate: function (Attr_Obj, value) {
+        if (value == "") {
+            Error_Utility.ShowErrorBox(Error_Utility.escapeQuotes(Attr_Obj.errormsg));
+            Error_Utility.Error_Color(Attr_Obj);
+        } else {
+            Error_Utility.Success_Color(Attr_Obj);
+        }
+        return false;
+    },
+
+    Mobile_Validate: function (Attr_Obj, value) {
+        if (value == "") {
+            Error_Utility.ShowErrorBox(Error_Utility.escapeQuotes(Attr_Obj.errormessage1));
+            Error_Utility.Error_Color(Attr_Obj);
+        } else {
+            var pattern = /^\d{10}$/;
+            var pattern_one = /(4|5|6|7|8|9)\d{9}$/;
+
+            if (pattern.test(value) == false) {
+                Error_Utility.ShowErrorBox(Error_Utility.escapeQuotes(Attr_Obj.errormessage2));
+                Error_Utility.Error_Color(Attr_Obj);
+            } else if (pattern_one.test(value) == false) {
+                Error_Utility.ShowErrorBox(Error_Utility.escapeQuotes("Mobile Number should be valid."));
+                Error_Utility.Error_Color(Attr_Obj);
+            } else {
+                Error_Utility.Success_Color(Attr_Obj);
+            }
+        }
+        return false;
+    },
+
+    Email_Validate: function (Attr_Obj, value) {
+        if (value == "") {
+            Error_Utility.ShowErrorBox(Error_Utility.escapeQuotes(Attr_Obj.errormessage1));
+            Error_Utility.Error_Color(Attr_Obj);
+        } else {
+            var pattern = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+            if (pattern.test(value) == false) {
+                Error_Utility.ShowErrorBox(Error_Utility.escapeQuotes(Attr_Obj.errormessage2));
+                Error_Utility.Error_Color(Attr_Obj);
+            } else {
+                Error_Utility.Success_Color(Attr_Obj);
+            }
+        }
+        return false;
+    },
+
+    Error_Color: function (Attr_Obj) {
+       // $('#' + Attr_Obj.id).css({ 'border': '1px solid red' });
+       // $('#' + Attr_Obj.id).closest('div').parent("div").find("i").attr("class", "fa fa-asterisk").css({ 'color': 'Red' });
+       // return false;
+    },
+
+    Success_Color: function (Attr_Obj) {
+      //  $('#' + Attr_Obj.id).css({ 'border': '1px solid #ccc' });
+     //   $('#' + Attr_Obj.id).closest('div').parent("div").find("i").attr("class", "fa fa-check-square-o").css({ 'color': 'green' });
+      //  return false;
+    },
+};
+
+Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(BeginRequestHandler);
+Sys.WebForms.PageRequestManager.getInstance().add_endRequest(EndRequestHandler);
+
+function BeginRequestHandler(sender, args) {
+    //////alert("BeginRequestHandler");
+    $("#progressPopup").show();
+    $("#loader").show();
+}
+
+function EndRequestHandler(sender, args) {
+    //////alert("EndRequestHandler");
+    $("#progressPopup").hide();
+    $("#loader").hide();
+}
+
+function pageLoad(sender, args) {
+    $("input.Mandatory").blur(function () {
+        var Attribute_Arr = [];
+        Attribute_Arr = $('#' + this.id).getAttributes();
+
+        if ($(this).attr("errortype") == "Required") {
+            Error_Utility.Required_Validate(Attribute_Arr, this.value);
+        } else if ($(this).attr("errortype") == "Mobile_Validate") {
+            Error_Utility.Mobile_Validate(Attribute_Arr, this.value);
+        } else if ($(this).attr("errortype") == "Email_Validate") {
+            Error_Utility.Email_Validate(Attribute_Arr, this.value);
+        }
+    });
+    $("select.Mandatory").change(function () {
+        var Attribute_Arr = [];
+        Attribute_Arr = $('#' + this.id).getAttributes();
+        if ($('#' + this.id).prop('selectedIndex') == 0) {
+            Error_Utility.Required_Validate(Attribute_Arr, "");
+        } else {
+            Error_Utility.Required_Validate(Attribute_Arr, this.value);
+        }
+    });
+}
+
+function Get_Validate_Form() {
+    $(".Mandatory").each(function (index) {
+        var Attribute_Arr = [];
+        Attribute_Arr = $('#' + this.id).getAttributes();
+        if ($(this)[0].nodeName == "INPUT") {
+            if ($(this).attr("errortype") == "Required") {
+                Error_Utility.Required_Validate(Attribute_Arr, this.value);
+            } else if ($(this).attr("errortype") == "Mobile_Validate") {
+                Error_Utility.Mobile_Validate(Attribute_Arr, this.value);
+            } else if ($(this).attr("errortype") == "Email_Validate") {
+                Error_Utility.Email_Validate(Attribute_Arr, this.value);
+            }
+        } else if ($(this)[0].nodeName == "SELECT" || $(this)[0].nodeName == "OPTION") {
+            debugger;
+            if ($('#' + this.id).prop('selectedIndex') == 0) {
+                Error_Utility.Required_Validate(Attribute_Arr, "");
+            } else {
+                Error_Utility.Required_Validate(Attribute_Arr, this.value);
+            }
+        }
+        return false;
+    });
+}
+
+function get_Page_key() {
+    var live_url = window.location.href;
+    var url_Arr = [];
+    url_Arr = live_url.split("/");
+    var New_key = url_Arr[url_Arr.length - 1];
+    var page_key = [];
+    page_key = New_key.split(".");
+    return page_key[0];
+}
+
+
+function autoHideErrorBox() {
+    var msg = Error_Utility.unescapeQuotes(string);
+    $('.ErrorMsg').html(msg);
+    $('.popup').css("right", "20px");
+
+    setTimeout(function () {
+        $('#ErrorBox').css("right", "-420px");
+    }, 3000);
+}
+
+
+var parameter = Sys.WebForms.PageRequestManager.getInstance();
+parameter.add_endRequest(function () {
+
+    function ShowErrorBox(msg) {
+        $('.ErrorMsg').html(msg);
+        $('.popup').show().css("right", "20px");
+        return false;
+    }
+
+});
+
+

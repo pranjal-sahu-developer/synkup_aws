@@ -1,0 +1,1046 @@
+/*Logo*/
+.logo {
+	background:url(../images/uppsc.png) no-repeat 3px 0;
+	float: left;
+	font-size: 160%;
+	line-height: 105%;
+	min-height: 103px;
+	padding: 14px 0 0 78px;
+	text-transform: uppercase;
+}
+.logo a {
+	color:#000;
+}
+.logo a strong {
+	font-weight:600;
+	display:block;
+	font-size:80%;
+}
+.logo a span {
+	display:block;
+	font-weight:900;
+	font-size:110%;
+}
+.logo a {
+	display:block;
+	text-align:left;
+}
+/*Logo*/
+
+
+@charset "utf-8";
+*, *:before, *:after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+	display: block;
+	box-sizing:border-box;
+}
+audio, canvas, video {
+	display: inline-block;
+ *display: inline;
+ *zoom: 1;
+}
+audio:not([controls]) {
+ display: none;
+}
+a {
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	text-decoration: none;
+	outline: none;
+	/*-- CSS3 Transition --*/
+	transition:all 0.2s ease-in-out;
+	-moz-transition:all 0.2s ease-in-out;
+	-webkit-transition:all 0.2s ease-in-out;
+}
+a:focus, a:hover, a:active {
+	outline: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, figure, footer, header, hgroup, nav, section {
+	display: block;
+}
+object, embed {
+	max-width: 100%;
+}
+ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+img {
+	width: auto\9;
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+}
+del {
+	text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+	border-bottom: 1px dotted #000;
+	cursor: help;
+}
+/* tables still need cellspacing="0" in the markup */
+
+
+/*table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+th {
+	font-weight: 700;
+	vertical-align: bottom;
+}
+td {
+	font-weight: normal;
+	vertical-align: top;
+}*/
+
+
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+small {
+	font-size: 85%;
+}
+strong, th {
+	font-weight: bold;
+}
+td, td img {
+	vertical-align: top;
+}
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+}
+sup {
+	top: -0.2em;
+ *top: -0.3em;
+	font-weight: normal;
+}
+sub {
+	bottom: -0.25em;
+}
+/* standardize any monospaced elements */
+
+/* Corrects overflow displayed oddly in IE 9. */
+svg:not(:root) {
+ overflow: hidden;
+}
+/* Form Elements */
+input, select {
+	vertical-align: middle;
+}
+
+/* Placeholder configaration*/
+input:-moz-placeholder, textarea:-moz-placeholder {
+ color: #999999;
+}
+ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+ color: #999999;
+}
+ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+ color: #999999;
+}
+/* make buttons play nice in IE */
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+	-webkit-appearance: button;
+	cursor: pointer;
+	overflow: visible;
+}
+
+/*Removes inner padding and border in Firefox 4+.*/
+button::-moz-focus-inner, input::-moz-focus-inner {
+ border: 0;
+ padding: 0;
+}
+/* hand cursor on clickable elements */
+.clickable, label, select, button, input[type="button"], input[type="reset"], input[type="submit"], input[type="radio"], input[type="checkbox"] {
+	cursor: pointer;
+}
+.ie6 input {
+	vertical-align: text-bottom;
+}
+/*Re-set default cursor for disabled elements.*/
+button[disabled], input[disabled] {
+	cursor: default;
+}
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {
+	margin: 0;
+	vertical-align: top;
+	transition:all 0.2s ease-in-out;
+	-moz-transition:all 0.2s ease-in-out;
+	-webkit-transition:all 0.2s ease-in-out;
+}
+input[type="radio"] {
+	vertical-align: text-bottom;
+	box-sizing: border-box;
+	padding: 0;
+}
+input[type="checkbox"] {
+	vertical-align: text-bottom;
+	box-sizing: border-box;
+	padding: 0;
+}
+input[type="search"] {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	-webkit-appearance: textfield;
+}
+
+/* Removes inner padding and search cancel button in Safari 5 and Chrome*/
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button {
+ -webkit-appearance: none;
+}
+h1, h2, h3, h4, h5 {
+	margin:0;
+	padding:0;
+	line-height:normal;
+	font-weight:normal;
+	font-size:100%;
+}
+
+::selection {
+ background: rgba(0, 0, 0, .2); /* Safari */
+}
+::-moz-selection {
+ background: rgba(0, 0, 0, .2); /* Firefox */
+}
+/*===========Usefull CSS===========*/
+.clear {
+	clear: both;
+	display: block;
+}
+.clearfix {
+ *zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+	display: table;
+	line-height: 0;
+	content: "";
+}
+.clearfix:after {
+	clear: both;
+}
+.row:before, .row:after {
+	display: table;
+	line-height: 0;
+	content: "";
+}
+.row:after {
+	clear: both;
+}
+.footer-top-wrapper ul:before, .footer-top-wrapper ul:after {
+	display: table;
+	line-height: 0;
+	content: "";
+}
+.footer-top-wrapper ul:after {
+	clear: both;
+}
+.float-element:before, .float-element:after {
+	display: table;
+	line-height: 0;
+	content: "";
+}
+.float-element:after {
+	clear: both;
+}
+/* Common Section
+----------------------------------*/
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	color: #686868;
+	font-size: 14px;
+	background: #ffffff;
+	overflow-x: hidden;
+}
+a {
+	color: #686868;
+}
+
+
+.wrapper {
+	position: relative;
+}
+.wrapper:before, .wrapper:after {
+	display: table;
+	line-height: 0;
+	content: "";
+}
+.wrapper:after {
+	clear: both;
+}
+.container:before, .container:after {
+	display: table;
+	line-height: 0;
+	content: "";
+}
+.container:after {
+	clear: both;
+}
+.container {
+	position: relative;
+	margin: 0 auto;
+	display: block;
+	max-width: 1180px;
+}
+.top-wrapper {
+	background:#f7f7f7;
+	padding:8px 0px;
+	border-bottom:1px solid #eeeeee;
+}
+.top-left {
+	float:left;
+	height:27px;
+}
+.top-left a {
+	background:url(../images/flag.jpg) no-repeat 0px 0px;
+	display:inline-block;
+	line-height:27px;
+	padding:0px 0px 0px 48px;
+	font-size:85%;
+}
+.top-left a span {
+	display:inline-block;
+	width:10px;
+	height:10px;
+	background:url(../images/ico-link-dark.png) no-repeat;
+	margin-left:5px;
+}
+.accessibility {
+	float:right;
+}
+.accessibility a.skip-cont {
+	float:left;
+	margin-top:4px;
+}
+ul.social-links {
+	float:left;
+	margin:2px 0px 0px 12px;
+	font-size:100%;
+}
+ul.social-links li {
+	float:left;
+	margin-left:5px;
+}
+ul.social-links li:first-child {
+	margin-left:0px;
+}
+ul.font-controll {
+	float:left;
+	margin:4px 0px 0px 15px;
+}
+ul.font-controll li {
+	float:left;
+	margin-left:10px;
+}
+ul.font-controll li:first-child {
+	margin-left:0px;
+}
+/*.high-contrast{float:left; width:22px; height:22px; margin:2px 0px 0px 12px; line-height:22px; text-align:center; border-radius:1px; display:inline-block;}*/
+.high-contrast.dark {
+	background:#363636 !important;
+	color:#fff !important;
+}
+.high-contrast.light {
+	background:#fff;
+	color:#363636;
+}
+.lan {
+	float:left;
+	margin:2px 0 0 12px;
+}
+.lan select {
+	width:90px;
+	padding:0px 5px;
+	height:22px;
+	border:1px solid #dadada;
+	color:#686868;
+	border-radius:1px;
+}
+.lan select option {
+	padding:2px 5px;
+}
+.header-wrapper {
+	border-bottom:1px solid #fff;
+}
+.header-container {
+	padding:8px 0px;
+}
+
+
+.header-right {
+	float:right;
+}
+.float-element {
+	float:left;
+	margin-left:12px;
+}
+.inp-search {
+	border:1px solid rgba(0, 0, 0, .2);
+	height:31px;
+	width:160px;
+	padding:0px 35px 0 10px;
+	border-radius:14px;
+}
+.search-area {
+	position:relative;
+}
+.nav-wrapper {
+	height:40px;
+	background:#dddddd;
+}
+.body-container {
+	padding:15px 0px 0px 0px;
+}
+.body-container p {
+	padding-bottom:22px;
+	line-height:170%;
+}
+.body-container ul.list {
+	padding-bottom:22px;
+	margin-left:2px;
+}
+.body-container ul.list li {
+	display:block;
+	padding:0px 0px 7px 15px;
+	background:url(../images/blt.png) no-repeat 0px 6px;
+}
+.body-container ul.list li a {
+	display:inline-block;
+}
+.body-container ul li a:hover {
+	text-decoration:underline;
+}
+h2.title {
+	font-size:205%;
+	font-weight:300;
+	padding-bottom:6px;
+	line-height:120%;
+}
+h3.sub-title {
+	font-size:180%;
+	font-weight:300;
+	padding-bottom:6px;
+	line-height:120%;
+}
+h2.title.bold, h3.sub-title.bold {
+	font-weight:700;
+}
+.carousel-wrapper {
+	padding:0px 0 0px 0px;
+	background:url(../images/carousel-bg.png) repeat;
+	border-top:1px solid #d2d2d2;
+}
+.carousel-wrapper:after {
+	position:absolute;
+	content:'';
+	top:0px;
+	left:0px;
+	height:10px;
+	width:100%;
+	background:url(../images/after-bg.png) repeat;
+	z-index:10;
+}
+.carousel-wrapper h3 {
+	padding-bottom:15px;
+}
+/*.footer-wrapper{padding-top:50px;}*/
+.footer-top-wrapper {
+	text-align:center;
+	background:url(../images/footer-top-bg.jpg) repeat;
+}
+.footer-top-wrapper ul {
+	display:inline-block;
+	padding:12px 0px 2px 0px;
+}
+.footer-top-wrapper ul li {
+	float:left;
+	color:#888888;
+}
+.footer-top-wrapper ul li a {
+	padding:0px 12px;
+	color:#888888;
+	display:inline-block;
+}
+.footer-top-wrapper ul li:hover a, .footer-top-wrapper ul li.selected a {
+	color:#fff;
+}
+.footer-top-wrapper ul li:before {
+	content:'|';
+}
+.footer-top-wrapper ul li:first-child:before {
+	content:'';
+}
+.footer-bottom-wrapper {
+	background-image:url(../images/footer-bottom-bg.png);
+	background-repeat:repeat;
+	background-color:#333;
+	padding:0px 0px;
+	color:#b8b8b8;
+	position:relative;
+	text-align:center;
+}
+.footer-bottom-wrapper:after {
+	position:absolute;
+	content:'';
+	top:0px;
+	left:0px;
+	height:4px;
+	width:100%;
+	background:url(../images/after-bottom-bg.png) repeat;
+	z-index:10;
+}
+/*.logo-cmf{display:block; text-align:center;}
+.logo-cmf a{display:inline-block; padding:25px; border-left:1px solid rgba(0, 0, 0, .2); border-right:1px solid rgba(0, 0, 0, .2);}*/
+
+.logo-cmf a {
+	border-right: 1px solid rgba(0, 0, 0, 0.5);
+	display: inline-block;
+	margin: 0 25px;
+	padding-right: 25px;
+}
+.footer-content {
+	padding: 15px 0;
+}
+.logo-cmf {
+	padding: 10px 0 0 0;
+	text-align: right;
+}
+.copyright-content {
+	color: #dadada;
+	font-size: 76%;
+	line-height: 150%;
+	padding: 5px 25px 0px 0;
+    border-right: 1px solid rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+.copyright-content span {
+	color: #888888;
+	display: block;
+}
+.footer-bottom-wrapper a {
+	color:#b8b8b8;
+}
+.footer-bottom-wrapper a:hover {
+	text-decoration:underline;
+    color:white;
+}
+.footer-block {
+	width:33.333%;
+	float:left;
+}
+.footer-block .flt-left {
+	float:left;
+}
+.footer-block .flt-right {
+	float:right;
+}
+.footer-logo {
+	float:left;
+	position:relative;
+}
+.footer-logo span {
+	display:block;
+	padding:0px 0px 2px 0px;
+}
+.cmf-logo {
+	text-align:left;
+	padding-top:5px;
+}
+.cqw-logo {
+	border-right:1px solid #333;
+	margin-right:13px;
+	padding:0px 13px 0px 0px;
+	text-align:left;
+}
+.site-info {
+	width:290px;
+	margin:0 auto;
+	text-align:center;
+	font-size:95%;
+}
+.ft-lan {
+	padding-bottom:8px;
+	text-align:right;
+}
+.ft-lan select {
+	width:90px;
+	padding:0px 5px;
+	height:25px;
+	border:0px solid #dadada;
+	color:#686868;
+	border-radius:2px;
+	overflow:hidden;
+}
+.ft-lan select option {
+	padding:2px 5px;
+}
+.bttn {
+	display:inline-block;
+	padding:5px 10px;
+	border-radius:3px;
+	background:#dddddd;
+}
+.bttn:hover {
+	background:#CCCCCC;
+}
+.right-content {
+	padding-top:30px;
+}
+.toggle-nav-bar {
+	display:none;
+}
+.content-block {
+	display:block;
+}
+
+
+
+
+/*----Dropdown Menu----*/
+#nav ul {
+	margin-left: -9999px;
+}
+#nav li:hover>ul, #nav li.hover>ul, #nav a:focus+ul, #nav .hover a:focus {
+	margin-left: 0;
+	z-index:100;
+}
+#nav ul a:focus {
+	margin-left: 0px;
+}
+#side_nav ul {
+	margin-left: -9999px;
+}
+#side_nav li:hover>ul, #side_nav li.hover>ul, #side_nav a:focus+ul, #side_nav .hover a:focus {
+	margin-left: 0;
+	z-index:100;
+}
+#side_nav ul a:focus {
+	margin-left: 9999px;
+}
+/**/
+
+.nav-wrapper ul li {
+	display:block;
+	float:left;
+	position:relative;
+	border-left:1px solid rgba(0, 0, 0, .1);
+}
+.nav-wrapper ul li a {
+	padding:0px 13px;
+	display:block;
+	line-height:35px;
+}
+.nav-wrapper ul li:first-child a {
+		
+}
+.nav-wrapper ul li:hover a, .nav-wrapper ul li.hover a, .nav-wrapper ul li.active a {
+	background:#cdcdcd;
+}
+.nav-wrapper ul ul {
+	position:absolute;
+	z-index:1000;
+	top:100%;
+	left:-1px;
+	background:#cdcdcd;
+	width:300px;
+}
+.nav-wrapper ul li:hover ul {
+	display:block;
+}
+.nav-wrapper ul ul li {
+	display:block;
+	float:none;
+	border-bottom:1px solid rgba(0, 0, 0, .1);
+	border-left:0px;
+}
+.nav-wrapper ul ul li a {
+	display:block;
+	padding:0px 15px;
+	line-height:35px;
+}
+.nav-wrapper ul ul li.active a, .nav-wrapper ul ul li.hover a, .nav-wrapper ul ul li a:hover {
+	background:#b3b3b3;
+}
+/*----Dropdown Menu----*/
+
+
+/*-----Responsive Table----*/
+/*New Table CSS*/
+
+.table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom:22px;
+}
+    /* Zebra striping */
+.table tr:nth-of-type(odd) {
+ background: #f8f8f8;
+}
+.table th {
+	background: #3a4f63;   /*e86331 #1f4a7c*/
+	color: white;
+	font-weight: 200;
+	white-space:nowrap;
+}
+.table td,.table th {
+	padding: 10px;
+	border: 1px solid #e4e4e4;
+	text-align: left;
+	line-height:145%;
+}
+
+
+
+
+
+.scroll-table {
+	overflow-x: auto;
+	padding-bottom: 0px;
+	margin-bottom:22px;
+}
+.guide-text {
+	text-align:right;
+	display:none;
+}
+ @media screen and (max-width: 767px) {
+ .guide-text {
+display:block;
+margin-bottom:0px;
+color:#333333;
+font-weight:600;
+font-size:13px;
+}
+ .guide-text i {
+ font-size: 14px;
+ vertical-align: text-bottom;
+}
+}
+/*Common wrapper*/
+  .common-wrapper {
+	border-bottom:1px solid #eeeeee;
+	background:#fbfbfb;
+}
+.common-container {
+	height:36px;
+}
+.container.common-container {
+	max-width: 1330px;
+	padding: 0 15px;
+	width: 100%;
+}
+.common-left {
+	float:left;
+	position:relative;
+}
+.common-left.common-left-ind li a{line-height:22px;}
+.common-left.common-left-ind li:first-child{width:115px;}
+
+
+.common-right {
+	float:right;
+	position:relative;
+}
+.common-left ul li {
+	float:left;
+	line-height:132%;
+	font-size:72%;
+	font-weight:600;
+	text-transform:uppercase;
+	height:36px;
+	padding-top:6px;
+}
+.common-left ul li.gov-india {
+	text-align:right;
+}
+.common-left ul li span {
+	display:block;
+	font-size:120%;
+}
+.common-left ul li.ministry {
+	padding-left:10px;
+	margin-left:10px;
+	border-left:1px solid #eeeeee;
+}
+.common-right ul li {
+	float:left;
+	position:relative;
+	height:36px;
+	padding:6px 7px;
+	border-left:1px solid #eeeeee;
+}
+.common-right ul li a {
+	display:block;
+	width:24px;
+	height:24px;
+	font-size:90%;
+}
+.common-right ul li.ico-skip > a {
+	background:url(../images/ico-skip.png) no-repeat;
+}
+.common-right ul li.ico-accessibility > a {
+	background:url(../images/ico-accessibility.png) no-repeat;
+}
+.common-right ul li.ico-color > a {
+	background:none;
+}
+.common-right ul li.ico-social > a {
+	background:url(../images/ico-social.png) no-repeat;
+}
+.common-right ul li.ico-login > a {
+	background:url(../images/ico-login.png) no-repeat;
+}
+.common-right ul li.ico-site-search > a {
+	background:url(../images/ico-site-search.png) no-repeat;
+}
+.common-right ul li.ico-sitemap > a {
+	background:url(../images/ico-sitemap.png) no-repeat;
+}
+.common-right ul li.hindi a {
+	font-size:95%;
+	font-weight:600;
+}
+.search-drop input[type='text'] {
+	border:0px solid #eeeeee;
+	height:36px;
+	padding:0px 40px 0px 8px;
+	width:200px;
+}
+.search-drop {
+	position:relative;
+}
+.search-drop a {
+	visibility:hidden;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+.skip-main a {
+	width:auto !important;
+	line-height:normal;
+	display:inline-block;
+	padding-top:3px;
+}
+.common-right ul li a {
+	opacity:1;
+}
+.common-right ul li.hover a {
+	opacity:0.7;
+}
+.common-right ul li ul {
+	position:absolute;
+	top:37px;
+	right:0px;
+	z-index:9999;
+	box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);
+	background:#fff;
+	padding:9px 8px;
+	visibility:hidden;
+}
+.common-right ul li ul.search-drop {
+	visibility:visible;
+	display:none;
+}
+.common-right ul li ul li {
+	float:none;
+	position:relative;
+	height:auto;
+	padding:0px 0px;
+	border-left:0px solid #eeeeee;
+}
+/*.common-right ul li.hover ul{visibility:visible;}*/
+
+ .common-right li:hover>ul,  .common-right li.hover>ul,  .common-right a:focus+ul,  .common-right .hover a:focus {
+	visibility:visible;
+}
+.common-right ul li.ico-accessibility ul {
+	height:110px;
+}
+.common-right ul li.ico-social ul {
+	height:102px;
+}
+.common-right ul li.ico-accessibility ul li a {
+	background:#eeeeee;
+	color: #000;
+	display: inline-block;
+	height: 20px;
+	line-height: 22px;
+	margin-top: 9px;
+	width: 20px;
+	text-align:center;
+}
+.common-right ul li.ico-accessibility ul li:first-child a {
+	margin-top:0px;
+}
+.common-right ul li.ico-social ul li a {
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+	display: inline-block;
+	height: 22px;
+	margin-top: 9px;
+	width: 22px;
+}
+.common-right ul li.ico-social ul li:first-child a {
+	margin-top:0px;
+}
+.common-right ul li.ico-site-search input[type="text"] {
+  background: #fff url("../images/goi-search-bg.png") no-repeat scroll 8px 12px;
+  border: 2px solid #aa2323;
+  font-weight: 600;
+  height: 36px;
+  line-height: 34px;
+  padding: 0 40px 0 8px;
+  width: 270px;
+}
+.common-right ul li.ico-site-search input[type="text"]:focus{background:none;}
+
+.common-right ul li.ico-site-search ul {
+	padding:0px;
+	height:36px;
+}
+.bttn-search {
+	width:36px;
+	height:36px;
+	cursor:pointer;
+	border:0px;
+	background-color:#AA2323;
+	line-height:27px;
+	text-align:center;
+	overflow:hidden;
+	text-indent:-200px;
+	font-size:1px;
+	background-image:url(../images/ico-search.png);
+	background-repeat:no-repeat;
+	background-position: center;
+	position:absolute;
+	top:0px;
+	right:0px;
+	opacity:1;
+}
+.bttn-search:hover {
+	opacity:0.8;
+}
+.sw-logo {
+	display:inline-block;
+}
+a:focus {
+	outline:1px dotted #333;
+}
+.common-left ul li.gov-india a:hover {
+	color:#686868 !important;
+}
+.common-left ul li.gov-india a:focus {
+	color:#686868 !important;
+}
+
+.common-left a, .common-left li{color:#000;}
+
+
+.common-left a {
+	display:inline-block;
+}
+.common-left a:focus {
+	color:#000 !important;
+}
+
+/* Css Media Queries Screens */
+@media only screen and (min-width:200px) and (max-width:400px) {
+    .footer-top-wrapper ul li a {
+	    padding:0px 6px;
+    }
+}
+
+
+/* Css Media Queries Screens */
+@media only screen and (min-width:200px) and (max-width:767px) {
+    .logo-cmf {
+        text-align:center;
+        width:100%;
+    }
+    .logo-cmf a {
+        border-right: 0px solid rgba(0, 0, 0, 0.5);
+        display: inline-block;
+        margin: 0 25px;
+        padding: 0px;
+    }
+    .copyright-content {
+	    
+        color: #dadada;
+	    font-size: 72%;
+	    line-height: 150%;
+	    padding: 12px;
+        border-right: 0px solid rgba(0, 0, 0, 0.5);
+        text-align: center;
+    }
+    .copyright-content span {
+	    color: #888888;
+	    display: block;
+    }
+    
+
+}
+
+
+/*Box Wrapper*/
+.box-wrapper{display:block; padding:30px 0px;}
+.box-wrapper ul{margin:0px -15px;}
+.box-wrapper ul li{float:left; width:25%;}
+.box-wrapper ul li div.box-holder{border:3px solid #dadada; background:#f7f7f7; margin:15px; min-height:150px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

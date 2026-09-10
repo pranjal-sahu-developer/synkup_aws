@@ -1,0 +1,332 @@
+﻿@charset "utf-8";
+ @media all and (max-width : 1200px) {
+	 
+	 .social-link ul li{padding:0px 5px;}
+	 .nav-wrapper ul li a{padding:0px 18px;}
+
+.re-ngo-container{ margin-top:20px;}
+.ebook-container { margin-top:14px;}
+ 
+.nav-wrapper ul li a {
+  font-size: 96%;
+  padding: 0 4px !important;
+}
+}
+
+ @media all and (max-width : 1100px) {
+	
+ }
+ @media all and (max-width : 1023px) {
+	 
+	 .nav-wrapper ul li a{padding:0px 15px;}
+
+}
+ @media all and (max-width : 991px) {
+ .nav-wrapper ul li a{padding:0px 13px;}
+
+}
+ @media all and (max-width : 940px) {
+	 .left-logo, .right-logo{display:none;}
+	 
+	 .justiss {
+  background: url("../images/justiss.png") no-repeat scroll 33px 0 rgba(0, 0, 0, 0);
+  padding-left: 120px;
+}
+
+.social-link ul li {
+  padding: 0 1px;
+}
+
+}
+ @media all and (max-width : 850px) {
+	 
+	 .left-sidebar{width:35%;}
+	 .right-container{width:65%;}
+	 
+	 .banner-wrapper .flexslider{width:100%; float:none;}
+	 .minister{width:100%; float:none; position:relative;}
+	 .min-image{float:left; width:50%;}
+	 .min-image a{display:block; float:left; width:40%;}
+	 .min-image a img{margin-left:0px;}
+	 .min-image span{display:block; width:55%; float:right; padding-top:50px; text-align:left;}
+	 .min-image span h4, .min-image span h5{text-align:left;}
+	 .infocus{position:inherit; float:right; width:42%; margin-top:23px;}
+	 
+	 .whats-new, .other-links{width:100%; float:none;}
+	 .other-links ul li{width:45%; margin-right:2%; display:inline-block; vertical-align:top;}
+	 .big-link{width:50%; margin-bottom:10px;}
+	 
+	 .links-panel2 .link{width:45%; margin-bottom:22px;}
+	 .links-panel2 .link a span{display:inline;}
+	 .links-panel2 .link ul{padding-top:8px;}
+	 .social-link ul{text-align:center;}
+	 .social-link ul li {
+  display: inline-block;
+  margin-bottom: 10px;}
+  
+  .whats-new{float:none; padding:0px; margin:0px; display:block; width:100%;}
+.infocus-cont{float:none; padding:0px; margin:0px; display:block; width:100%;}
+ .links-panel-wrapper{border:0px;} 
+ .bttn-area{text-align:left;}
+
+ .whats-new-left ul{padding-left:5px;}
+ 
+.meet-minister-container {
+    float: right; padding-left: 20px;  position: relative;  width: 65%;}
+.banner-wrapper .container{width:94%;}
+.minister{padding-left:5%; padding-right:5%;}
+
+.re-ngo-container {
+    margin-top: 10px;
+}
+
+.meet-minister-container .ministerimg {
+    float: none; width:100%;
+    text-align: center;
+}
+.meet-minister-container .minister-content { float: none; width: 100%;}
+
+	 
+
+ /*.whats-new-left{float:none; display:block; width:100%;}*/
+	.documents {
+  margin: 0 auto;
+  padding: 0;
+}
+.documents .iec ul li{text-align:center;}
+.link-bttn-ico1, .link-bttn-ico2 {
+  
+  width: 60px;
+  height:60px; position:relative;
+  float:left;
+}
+
+.link-bttn-text {
+  
+  float: left;
+ 
+  padding: 20px 0 20px 5px;
+  width:auto;
+  
+}
+.link-bttn-cont a{display:inline-block;}
+.link-bttn-cont {text-align:center;}
+
+
+.whats-new ul {
+  height: 240px;
+}
+.whats-new-left, .infocus-cont{height:auto;}
+
+.big-link {
+  width: 33%;
+}
+}
+ @media all and (max-width : 767px) {
+	 
+	 .left-sidebar{width:100%; float:none; display:block;}
+	 .right-container{width:100%; float:none; display:block; padding:0px;}
+	 
+	 .min-image span{padding-top:33px;}
+	 .whats-new-left{float:none; display:block; width:100%;}
+	 .documents{padding:0px; float:none; display:block; width:100%;}
+	 .link-bttn-ico1, .link-bttn-ico2{position:static; float:left; width:50px; height:50px; margin-right:15px;}
+	 .link-bttn-text{float:left; width:auto; padding:0px; line-height:50px;}
+	 .link-bttn-cont a{padding:10px 0;}
+	 .beti-bachao-logo{position:static; float:left; margin:0; padding:0;}
+	 .beti-bachao-inner{margin:0px; padding:0px; text-align:left;}
+	 .link-bttn-cont{padding-bottom:0px; margin:0px;}
+	 
+	 .link-bttn-cont a:before, .link-bttn-cont a:after {
+	display: table;
+	line-height: 0;
+	content: "";
+}
+.link-bttn-cont a:after {
+	clear: both;
+}
+
+	 .beti-bachao-inner a:before, .beti-bachao-innert a:after {
+	display: table;
+	line-height: 0;
+	content: "";
+}
+.beti-bachao-inner a:after {
+	clear: both;
+}
+
+.beti-bachao-inner a{padding:5px 0px 8px 0px;}
+.beti-bachao-inner a span.beti-bachao-logo {
+  color: #464646;
+  display: block;
+  font-size: 105%;
+  font-weight: 300;
+  margin-right:15px;
+  width:50px;
+  height:50px;
+  float:left;
+}
+.meet-minister-container {
+    float: none;width: 100%;}
+
+.big-link {
+  float: none;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.big-links-footer .big-link a{text-align:center;}
+.big-links-footer .big-link a img{margin:0 auto;}
+
+.notice-section ul li {
+  
+  font-size: 110%;
+}
+
+.beti-bachao-inner{text-align:center}
+.beti-bachao-inner a{display:inline-block;}
+}
+@media all and (max-width : 650px) {
+	.min-image a{float:none; width:100%; float:none; }
+	.min-image span{display:block; float:none; width:100%; padding-top:5px; padding-bottom:10px;}
+	.infocus{margin-top:50px;}
+	.whats-new-left{float:none; width:100%;}
+	.documents-bg{display:none;}
+    .banner-wrapper{padding-bottom:10px;}
+    .slide-caption p {
+        font-size: 90%;
+    }
+    .flex-direction-nav a {
+        height: 37px;
+    }
+}
+ @media all and (max-width : 600px) {
+	 .minister{text-align:center;}
+	 .min-image span h4, .min-image span h5{text-align:center;}
+	 .min-image{float:none; width:auto; display:inline-block;}
+	 .infocus{margin:0px; width:100%; float:none;}
+	 
+	 .justiss {
+  background: url("../images/justiss.png") no-repeat scroll 33% 0 rgba(0, 0, 0, 0);
+  padding-left: 120px;
+  min-height:77px;
+}
+.whats-new h2, .other-links h2{text-align:center;}
+.big-link{width:100%; float:none;}
+.child-help a {
+  background: url("../images/Child-Help-Line.png") no-repeat scroll 5px 0 rgba(0, 0, 0, 0);
+  color: #759600;
+}
+
+.links-panel2 .link{width:100%; float:none;}
+.min-image a img{margin:0 auto;}
+.other-links ul li{width:100%; float:none;}
+.footer-logo li {  width: 18%;}
+ .links-panel ul li {
+    padding: 0 0 15px 21px;
+}
+.minister-content .heading { float: none;  width: 100%;}
+.minister-content .ministertxtright {float: none; width: 100%;}
+.minister-position-content .heading { float: none;  width: 100%;}
+.minister-position-content .ministertxtright {  float: none;  width:100%;}
+
+.logo {
+
+  background-size: 14% auto;
+}
+ 
+}
+
+@media all and (max-width : 340px) {
+.footer-logo li { margin: 3px 2px; width: 31%;}
+}
+
+@media all and (max-width : 320px) {
+	
+
+}
+
+
+@media all and (max-width : 639px) {
+	.logo {
+		background-position: 0 0;
+		background-size:contain;
+		font-size: 100%;
+		min-height: 56px;
+		padding: 0px 0 0 82px;
+		max-width:250px;
+		width: 100%;
+	}
+    .float-element a img {
+        margin-right: 70px;
+        width: 72px;
+    }
+	.logo a {
+		background-size: 64px 64px;
+		background-position: 0 4px;
+		
+	}
+	.banner-wrapper .container {
+		width: 100%;
+		background: rgba(76,85,87,1);
+		padding: 0;
+	}
+	.flex-direction-nav {
+		display: none;
+	}
+	
+    .slide-caption ul.list li {
+		font-size: 85%;
+	}
+	.common-right ul li {
+		padding: 6px 4px;
+	}
+	/*.container.header-container {
+		padding-left: 0;
+		padding-right: 0;
+	}*/
+	.tab-wrapper .container {
+		width: 100%;
+	}
+	.page-tab ul.resp-tabs-list li {
+		font-size: 83%;
+		padding: 16px 6px;
+	}
+	.column .resp-tabs-container ul.content_list li {
+		font-size: 75%;
+		line-height: 140%;
+		margin: 0 0 5px;
+	}
+	.resp-tabs-container {
+		padding: 0 15px 20px;
+		min-height: initial;
+	}
+	.resp-tab-content {
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+	.column ul.resp-tabs-list li {
+		font-size: 70%;
+		padding: 10px 8px;
+		text-align: center;
+	}
+	.resp-tabs-container ul.content_list li {
+		font-size: 85%;
+		margin: 0 0 5px;
+		padding-left: 12px;
+	}
+	.resp-tab-content a.viewall {
+		font-size: 85%;
+		margin-top: 10px;
+		padding: 6px 10px 8px;
+	}
+	.gallery-holder .flex-caption {
+		padding: 8px 10px;
+		font-size: 83%;
+		line-height: 115%;
+	}
+	/*.gallery-holder .flex-control-thumbs li,
+	.gallery-holder .flex-control-thumbs li:last-child {
+		margin-top: 10px;
+	}*/
+}
+

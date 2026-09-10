@@ -1,0 +1,277 @@
+$(document).ready(function () {
+    var selectIds = $('#panel1,#panel2,#panel3,#panel4');
+    $(function ($) {
+        selectIds.on('show.bs.collapse hidden.bs.collapse', function () {
+            $(this).prev().find('.fa').toggleClass('fa-plus fa-minus');
+        });
+    });
+    $("textarea[lengthtextarealimit]").each(function () {
+        var text_id = $(this).attr('id');
+        var max_val = $(this).attr('lengthtextarealimit');
+        $("#" + text_id).MaxLength({
+            MaxLength: max_val,
+            CharacterCountControl: $('#countertextlength')
+        });
+    });
+    // Slider						
+    $('#flexSlider').flexslider({
+        animation: "slide",
+        controlNav: false,
+        pausePlay: true,
+        start: function (slider) {
+            $('body').removeClass('loading');
+        }
+    });
+
+    $('#contSlider1').flexslider({
+        animation: "swing",
+        easing: 'swing',
+        fade: false,
+        controlNav: false,
+        directionNav: true,
+        direction: "vertical",
+        prevText: "Previous",
+        nextText: "Next",
+        slideshowSpeed: 2000,
+        minItems: 1,
+        move: 1,
+        pausePlay: true,
+
+    });
+
+    // Carousel						
+    $('#flexCarousel').flexslider({
+        animation: "slide",
+        animationLoop: false,
+        itemWidth: 150,
+        itemMargin: 5,
+        minItems: 2,
+        maxItems: 6,
+        slideshow: 1,
+        move: 1,
+        controlNav: false,
+        start: function (slider) {
+            $('body').removeClass('loading');
+            if (slider.pagingCount === 1) slider.addClass('flex-centered');
+        }
+    });
+
+    // Gallery
+    $('#galleryCarousel').flexslider({
+        animation: "slide",
+        controlNav: "thumbnails",
+        start: function (slider) {
+            $('body').removeClass('loading');
+        }
+    });
+
+    $("a.content_1_stop").hover(function () {
+        $("#content_1").mCustomScrollbar("stop");
+    }, function () {
+        $("#content_1").mCustomScrollbar("update");
+    });
+
+
+    $("a.content_2_stop").hover(function () {
+        $("#content_2").mCustomScrollbar("stop");
+    }, function () {
+        $("#content_2").mCustomScrollbar("update");
+    });
+
+    $("h5.content_3_stop").hover(function () {
+        $("#content_3").mCustomScrollbar("stop");
+    }, function () {
+        $("#content_3").mCustomScrollbar("update");
+    });
+
+
+    var content = $("#content_1"), autoScrollTimer = 5000, autoScrollTimerAdjust, autoScroll;
+    content.mCustomScrollbar({
+        scrollButtons: { enable: true },
+        mouseWheel: { disableOver: ["select", "option", "keygen", "datalist", "textarea", "li"] },
+        callbacks: {
+            whileScrolling: function () {
+                autoScrollTimerAdjust = autoScrollTimer * this.mcs.topPct / 100;
+            },
+            onScroll: function () {
+                if ($(this).data("mCS").trigger === "internal") { AutoScrollOff(); }
+            }
+        }
+    });
+
+    content.addClass("auto-scrolling-on auto-scrolling-to-bottom top_slider");
+    AutoScrollOn("bottom");
+
+    function AutoScrollOn(to, timer) {
+        if (!timer) { timer = autoScrollTimer; }
+        content.addClass("auto-scrolling-on").mCustomScrollbar("scrollTo", to, { scrollInertia: timer, scrollEasing: "easeInOutSmooth" });
+        autoScroll = setTimeout(function () {
+            if (content.hasClass("auto-scrolling-to-top")) {
+                AutoScrollOn("bottom", autoScrollTimer - autoScrollTimerAdjust);
+                content.removeClass("auto-scrolling-to-top").addClass("auto-scrolling-to-bottom");
+            } else {
+                AutoScrollOn("top", autoScrollTimerAdjust);
+                content.removeClass("auto-scrolling-to-bottom").addClass("auto-scrolling-to-top");
+            }
+        }, timer);
+    }
+
+    function AutoScrollOff() {
+        clearTimeout(autoScroll);
+        content.removeClass("auto-scrolling-on").mCustomScrollbar("stop");
+    }
+
+    var content_2 = $("#content_2"), autoScrollTimer = 3000, autoScrollTimerAdjust, autoScroll;
+
+    content_2.mCustomScrollbar({
+        scrollButtons: { enable: true },
+        callbacks: {
+            whileScrolling: function () {
+                autoScrollTimerAdjust = autoScrollTimer * this.mcs.topPct / 100;
+            },
+            onScroll: function () {
+                if ($(this).data("mCS").trigger === "internal") { AutoScrollOff_2(); }
+            }
+        }
+    });
+
+    content_2.addClass("auto-scrolling-on auto-scrolling-to-bottom top_slider");
+    AutoScrollOn_2("bottom");
+
+    function AutoScrollOn_2(to, timer) {
+        if (!timer) { timer = autoScrollTimer; }
+        content_2.addClass("auto-scrolling-on").mCustomScrollbar("scrollTo", to, { scrollInertia: timer, scrollEasing: "easeInOutSmooth" });
+        autoScroll = setTimeout(function () {
+            if (content_2.hasClass("auto-scrolling-to-top")) {
+                AutoScrollOn_2("bottom", autoScrollTimer - autoScrollTimerAdjust);
+                content_2.removeClass("auto-scrolling-to-top").addClass("auto-scrolling-to-bottom");
+            } else {
+                AutoScrollOn_2("top", autoScrollTimerAdjust);
+                content_2.removeClass("auto-scrolling-to-bottom").addClass("auto-scrolling-to-top");
+            }
+        }, timer);
+    }
+
+    function AutoScrollOff_2() {
+        clearTimeout(autoScroll);
+        content_2.removeClass("auto-scrolling-on").mCustomScrollbar("stop");
+    }
+
+    $('.date_show_function').datepicker({
+        autoclose: true,
+        format: 'dd/mm/yyyy'
+    });
+
+    $(document).ready(function () {
+        $("#progressPopup").hide();
+    });
+
+
+    var content_3 = $("#content_3"), autoScrollTimer = 3000, autoScrollTimerAdjust, autoScroll;
+    content_3.mCustomScrollbar({
+        scrollButtons: { enable: true },
+        callbacks: {
+            whileScrolling: function () {
+                autoScrollTimerAdjust = autoScrollTimer * this.mcs.topPct / 100;
+            },
+            onScroll: function () {
+                if ($(this).data("mCS").trigger === "internal") { AutoScrollOff_2(); }
+            }
+        }
+    });
+
+    content_3.addClass("auto-scrolling-on auto-scrolling-to-bottom top_slider");
+    AutoScrollOn_3("bottom");
+
+    function AutoScrollOn_3(to, timer) {
+        if (!timer) { timer = autoScrollTimer; }
+        content_3.addClass("auto-scrolling-on").mCustomScrollbar("scrollTo", to, { scrollInertia: timer, scrollEasing: "easeInOutSmooth" });
+        autoScroll = setTimeout(function () {
+            if (content_3.hasClass("auto-scrolling-to-top")) {
+                AutoScrollOn_3("bottom", autoScrollTimer - autoScrollTimerAdjust);
+                content_3.removeClass("auto-scrolling-to-top").addClass("auto-scrolling-to-bottom");
+            } else {
+                AutoScrollOn_3("top", autoScrollTimerAdjust);
+                content_3.removeClass("auto-scrolling-to-bottom").addClass("auto-scrolling-to-top");
+            }
+        }, timer);
+    }
+
+    function AutoScrollOff_3() {
+        clearTimeout(autoScroll);
+        content_3.removeClass("auto-scrolling-on").mCustomScrollbar("stop");
+    }
+    
+});
+
+
+//Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(BeginRequestHandler);
+//Sys.WebForms.PageRequestManager.getInstance().add_endRequest(EndRequestHandler);
+
+function BeginRequestHandler(sender, args) {
+    //////alert("BeginRequestHandler");
+    $("#progressPopup").show();
+    $("#loader").show();
+}
+
+function EndRequestHandler(sender, args) {
+    //////alert("EndRequestHandler");
+    $("#progressPopup").hide();
+    $("#loader").hide();
+}
+
+function RefreshCaptcha() {
+    var img = document.getElementById("MainContent_userControlCaptcha_ImgCaptcha");
+    img.src = "Captcha.ashx?query=" + Math.random();
+    var txtbx = document.getElementById("<%=txtInput.ClientID%>");
+    $(txtbx).focus();
+}
+
+
+
+//function RefreshCaptcha_Home(data_id) {
+//    //////alert('hiii');
+//    var Current_url = window.location.href;
+//    var img = document.getElementById(data_id);
+//    img.src = getBaseURL() + "/Captcha.ashx?query=" + Math.random();
+//    var txtbx = document.getElementById("<%=txtInput.ClientID%>");
+//    $(txtbx).focus();
+//}
+
+function getBaseURL() {
+    var Current_URL = window.location.href;
+    var Base_url = window.location.host;
+    var Get_data = Current_URL.split("/");
+    var res = Get_data[3];
+    Base_url = 'http://' + Base_url;
+    if (Current_URL.indexOf(res) == '-1') {
+        Base_url = Base_url + '/';
+    } else {
+        Base_url = Base_url + '/' + res;
+    }
+    return Base_url;
+}
+ 
+var parameter = Sys.WebForms.PageRequestManager.getInstance();
+parameter.add_endRequest(function () {
+    $("textarea[lengthtextarealimit]").each(function () {
+        var text_id = $(this).attr('id');
+        var max_val = $(this).attr('lengthtextarealimit');
+        $("#" + text_id).MaxLength({
+            MaxLength: max_val,
+            CharacterCountControl: $('#countertextlength')
+        });
+    });
+});
+
+
+//RefreshCaptcha_Home('MainContent_userControlCaptcha_ImgCaptcha')
+    
+    
+
+
+    
+    
+    
+
+
