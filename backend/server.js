@@ -27,6 +27,7 @@ const allowedOrigins = [
     "http://localhost:5173",
     "http://localhost:3000",
     "http://localhost:5001",
+    "http://synkup-alb-109333060.ap-south-1.elb.amazonaws.com",
     "https://synkup.vercel.app",
     ...extraOrigins,
 ];
